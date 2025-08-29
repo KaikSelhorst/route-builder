@@ -1,0 +1,28 @@
+{
+  "name": "@kaikselhorst/route-builder",
+  "module": "./src/index.ts",
+  "type": "module",
+  "keywords": [
+    "route",
+    "builder",
+    "route-builder",
+    "typescript"
+  ],
+  "author": "Kaik Selhorst",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx ./src/index.ts",
+    "build": "rm -rf dist && tsc --build",
+    "lint:fix": "biome check --write ./src/**/*",
+    "lint": "biome check ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaikselhorst/route-builder.git"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.2",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2"
+  }
+}
