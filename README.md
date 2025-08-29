@@ -2,6 +2,8 @@
 
 A simple and type-safe TypeScript library for building and manipulating routes with dynamic parameters.
 
+[![Release](https://github.com/kaikselhorst/route-builder/workflows/Publish%20Node.js%20Package%20on%20NPM/badge.svg)](https://github.com/kaikselhorst/route-builder/actions/workflows/release.yml)
+
 ## 🚀 Installation
 
 ```bash
@@ -86,6 +88,43 @@ route.withSearchParams([['q', 'typescript'], ['lang', 'en']]);
 ## 📝 License
 
 MIT - see the [LICENSE](LICENSE) file for more details.
+
+## 🚀 Development
+
+### Running Tests
+
+```bash
+# Run tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run tests in watch mode
+npm run test:watch
+```
+
+### Code Quality
+
+```bash
+# Lint code
+npm run lint
+
+# Fix linting issues
+npm run lint:fix
+
+# Run full CI pipeline locally
+npm run ci
+```
+
+### CI/CD
+
+This project uses GitHub Actions for continuous integration and deployment. See [CI/CD Documentation](docs/CI-CD.md) for detailed information.
+
+- **Automated Testing**: Runs on every push and pull request
+- **Code Coverage**: Monitored with Codecov
+- **Dependency Updates**: Automated with Dependabot
+- **NPM Publishing**: Automatic on release creation
 
 ## 👨‍💻 Author
 

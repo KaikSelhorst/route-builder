@@ -1,0 +1,32 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "kaikselhorst"
+    assignees:
+      - "kaikselhorst"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "automated"
+    # Automatically merge minor and patch updates
+    allow:
+      - dependency-type: "direct"
+        update-types: ["version-update:semver-patch", "version-update:semver-minor"]
+    # Group minor and patch updates together
+    groups:
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"

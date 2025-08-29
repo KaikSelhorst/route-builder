@@ -6,7 +6,16 @@ export default defineConfig({
     environment: 'node',
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html'],
+      reporter: ['text', 'html'],
+      exclude: [
+        'node_modules/',
+        'dist/',
+        'coverage/',
+        '**/*.d.ts',
+        '**/*.config.*',
+        '**/*.test.*',
+        '**/*.spec.*',
+      ],
     },
   },
 });
