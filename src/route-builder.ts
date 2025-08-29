@@ -13,7 +13,7 @@ type WithSearchParamsInit =
   | string
   | URLSearchParams
   | string[][]
-  | Record<string, string | number>
+  | Record<string, string | number | undefined | null>
   | undefined;
 
 type WithParamsInit<T extends string> = ExtractParams<T, string | number>;
@@ -68,7 +68,8 @@ export class RouteBuilder<const T extends string> {
 
     if (typeof params === 'object') {
       for (const [key, value] of Object.entries(params)) {
-        if (value != null) query.append(key, String(value));
+        if (value !== undefined || value !== null)
+          query.append(key, String(value));
       }
       return query;
     }
