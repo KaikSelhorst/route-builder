@@ -21,6 +21,17 @@
     "type": "git",
     "url": "git+https://github.com/kaikselhorst/route-builder.git"
   },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
+  },
   "devDependencies": {
     "@biomejs/biome": "2.2.2",
     "tsx": "4.20.5",
