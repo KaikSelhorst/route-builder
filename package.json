@@ -15,7 +15,10 @@
     "dev": "tsx ./src/index.ts",
     "build": "rm -rf dist && tsc --build",
     "lint:fix": "biome check --write ./src/**/*",
-    "lint": "biome check ./src"
+    "lint": "biome check ./src",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui"
   },
   "repository": {
     "type": "git",
@@ -34,7 +37,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.2",
+    "@vitest/ui": "^3.2.4",
     "tsx": "4.20.5",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "vitest": "^3.2.4"
   }
 }
